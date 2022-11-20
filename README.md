@@ -1,1 +1,6 @@
-# EffectiveJavaCode
+# EffectiveJava 정리 및 코드 추가 
+
+## 1. 객체 생성과 파괴 
+---------------------
+
+###
