@@ -6,4 +6,6 @@
 
 [chapter 1. 객체 생성과 파괴](chapter1.md)
 
+[chapter 6. 열거타입과 애너테이션](chapter6.md)
+
 
