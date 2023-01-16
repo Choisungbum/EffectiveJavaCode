@@ -1,4 +1,4 @@
-package chapter1.item2.builder;
+package chapter1.item2;
 
 // 코드 2-3 빌더 패턴 - 점층적 생성자 패턴과 자바빈즈 패턴의 장점만 취했다. (17~18쪽)
 public class NutritionFacts {
