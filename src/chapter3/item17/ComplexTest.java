@@ -1,4 +1,4 @@
-package chapter3.item15.item17;
+package chapter3.item17;
 
 public class ComplexTest {
 
