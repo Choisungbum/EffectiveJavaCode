@@ -48,6 +48,7 @@ public abstract class AbstractMapEntry<K,V> implements Map.Entry<K,V>{
 		return getKey() + "=" + getValue();
 	}
 	
+	// 몸체만 있고 선택적 단계  -> '훅'이라고 불림
 	@Override
 	public K getKey() {
 		// TODO Auto-generated method stub
