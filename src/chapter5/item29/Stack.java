@@ -1,4 +1,4 @@
-package effectiveJava.item29;
+package chapter5.item29;
 
 import java.util.Arrays;
 import java.util.EmptyStackException;

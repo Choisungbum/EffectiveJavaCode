@@ -1,4 +1,4 @@
-package effectiveJava.item27;
+package chapter5.item27;
 
 import java.util.Arrays;
 
