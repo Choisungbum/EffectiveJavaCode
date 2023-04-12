@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author csbti
- *
- */
-module EffectiveJava {
-}
