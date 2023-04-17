@@ -13,6 +13,7 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collector;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
@@ -90,10 +91,10 @@ public class Anagrams {
 //				e.printStackTrace();
 //			}
 //		}
-		
+
 		try (Stream<String> words = Files.lines(dictionary)) {
-			words.collect(groupingBy(word -> alphabetize(word))).values().stream()
-					.filter(group -> group.size >= minGroupSize)
+			words.collect(Collectors.groupingBy(word -> alphabetize(word))).values().stream()
+					.filter(group -> group.size() >= minGroupSize)
 					.forEach(g -> System.out.println(g.size() + ": " + g));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
