@@ -22,8 +22,8 @@ public class Stack implements Cloneable {
 			throw new EmptyStackException();
 		// 메모리 누수 발생 !!
 		// 다 쓴 참조를 여전히 가지고 있기 때문 -> 해당 참조를 다 썻을 경우 null로 참조해제
-		// 하지만 이경우는 예외적이어야 한다... -> 자기메모리를 직접 관리하는 경우
-		// 자기가 메모리관리 할 거면 항상 메모리 누수를 신경쓰자
+		// 하지만 위 경우는 예외적이어야 한다.
+	    // 자기메모리를 직접 관리하는 경우 항상 메모리 누수를 신경쓰자
 		//return elements[--size];
 		Object result = elements[--size];
 		elements[size] = null;
