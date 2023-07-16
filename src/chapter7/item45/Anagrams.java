@@ -83,7 +83,7 @@ public class Anagrams {
 //					groupingBy(word -> word.chars().sorted().collect(StringBuilder::new
 //							,(sb, c) -> sb.append((char) c), StringBuilder::append).toString()))
 //				 .values().stream()
-//				 .filter(group -> group.size() >= minGroupSize)
+//				 .filter(group -0> group.size() >= minGroupSize)
 //				 .map(group -> group.size() + ": " + group)
 //				 .forEach(System.out::println);
 //			} catch (IOException e) {
@@ -93,7 +93,8 @@ public class Anagrams {
 //		}
 
 		try (Stream<String> words = Files.lines(dictionary)) {
-			words.collect(Collectors.groupingBy(word -> alphabetize(word))).values().stream()
+			words.collect(Collectors.groupingBy(word -> alphabetize(word)))
+					.values().stream()
 					.filter(group -> group.size() >= minGroupSize)
 					.forEach(g -> System.out.println(g.size() + ": " + g));
 		} catch (IOException e) {

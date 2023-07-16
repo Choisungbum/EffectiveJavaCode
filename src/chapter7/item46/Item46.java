@@ -56,7 +56,7 @@ public class Item46{
 		}
 		
 		// 2. 스트림 API를 제대로 사용하고 짧고, 명확하다.
-		// Scanner의 스트림에서드 -> tokens()
+//		 Scanner의 스트림에서드 -> tokens()
 //		try(Stream<String> words = new Scanner(file).tokens()){
 //			freq = words.collect(Collectors.groupingBy(String::toLowerCase, Collectors.counting()));
 //		}
