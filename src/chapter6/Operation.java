@@ -31,6 +31,17 @@ public enum Operation {
 	@Override public String toString() {return symbol;}
 	public abstract double apply(double x, double y);
 	
+	public static Operation inverse(Operation op) {
+		switch(op) {
+			case PLUS : return Operation.PLUS;
+			case MINUS : return Operation.MINUS;
+			case TIMES : return Operation.TIMES;
+			case DIVIDE : return Operation.DIVIDE;
+			
+			default : throw new AssertionError("알 수 없는 연산: " + op);
+		}
+	}
+	
 //	private static final Map<String, Operation> stringToEnum = Stream.of(values())
 //																	.collect(toMap(Object::toString, e -> e));
 //	
