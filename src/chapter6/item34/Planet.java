@@ -1,4 +1,4 @@
-package chapter6;
+package chapter6.item34;
 
 public enum Planet {
 	MECURY (3.302e+23, 2.439e6),

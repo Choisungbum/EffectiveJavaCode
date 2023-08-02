@@ -1,4 +1,4 @@
-package chapter6;
+package chapter6.item34;
 
 public enum PayrollDay {
 //	34 - 9 전략 열거 타입 패턴 

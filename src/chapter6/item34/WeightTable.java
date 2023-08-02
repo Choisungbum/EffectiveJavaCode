@@ -1,4 +1,4 @@
-package chapter6;
+package chapter6.item34;
 public class WeightTable {
 	public static void main(String[] args) {
 		double earthWeight = Double.parseDouble("185");

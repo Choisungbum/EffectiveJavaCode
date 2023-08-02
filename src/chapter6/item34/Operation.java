@@ -1,4 +1,4 @@
-package chapter6;
+package chapter6.item34;
 
 import java.util.Optional;
 import java.util.stream.Stream;
