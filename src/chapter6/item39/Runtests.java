@@ -24,10 +24,20 @@ public class Runtests {
 				//Sample2//////////////////////////////////////
 				} catch (InvocationTargetException wrappedExc){
 					Throwable exc = wrappedExc.getCause();
-					Class<? extends Throwable> excType = 
+					///////////////////////////////////////////////
+//					Class<? extends Throwable> excType = 
+//							m.getAnnotation(ExceptionTest.class).value();
+//					if (excType.isInstance(exc)) {
+//						passed++;
+//					}
+					///////////////////////////////////////////////
+					Class<? extends Throwable>[] excTypes = 
 							m.getAnnotation(ExceptionTest.class).value();
-					if (excType.isInstance(exc)) {
-						passed++;
+					for (Class<? extends Throwable> excType : excTypes) {
+						if (excType.isInstance(exc)) {
+							passed++;
+							break;
+						}
 					}
 				} catch (Exception exc) {
 					System.out.println("잘못 사용한 @Test: " + m);
