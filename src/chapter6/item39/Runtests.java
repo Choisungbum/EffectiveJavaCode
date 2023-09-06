@@ -22,8 +22,8 @@ public class Runtests {
 //				}
 				///////////////////////////////////////////////
 				//Sample2//////////////////////////////////////
-				} catch (InvocationTargetException wrappedExc){
-					Throwable exc = wrappedExc.getCause();
+//				} catch (InvocationTargetException wrappedExc){
+//					Throwable exc = wrappedExc.getCause();
 					///////////////////////////////////////////////
 //					Class<? extends Throwable> excType = 
 //							m.getAnnotation(ExceptionTest.class).value();
@@ -31,6 +31,9 @@ public class Runtests {
 //						passed++;
 //					}
 					///////////////////////////////////////////////
+				} catch (Throwable  wrappedExc){
+					Throwable exc = wrappedExc.getCause();
+					int oldPassed = passed;
 					Class<? extends Throwable>[] excTypes = 
 							m.getAnnotation(ExceptionTest.class).value();
 					for (Class<? extends Throwable> excType : excTypes) {
@@ -39,9 +42,12 @@ public class Runtests {
 							break;
 						}
 					}
-				} catch (Exception exc) {
-					System.out.println("잘못 사용한 @Test: " + m);
-				}
+					if( passed == oldPassed) {
+						System.out.printf("테스트 %s 실패 : %s %n", m, exc);
+					}
+//				} catch (Exception exc) {
+//					System.out.println("잘못 사용한 @Test: " + m);
+//				}
 				///////////////////////////////////////////////	
 			}
 		}
